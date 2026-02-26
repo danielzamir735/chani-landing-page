@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { TrendingDown, Banknote, ShieldAlert } from "lucide-react";
 
 /* ─── Data ────────────────────────────────────────────────────────────── */
@@ -26,18 +26,18 @@ const cards = [
 ];
 
 /* ─── Animation variants ──────────────────────────────────────────────── */
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: "easeOut", delay },
+    transition: { duration: 0.65, ease: "easeOut" as const, delay },
   }),
 };
 
-const sectionHeader = {
+const sectionHeader: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } },
 };
 
 /* ─── Component ──────────────────────────────────────────────────────── */
