@@ -1,0 +1,32 @@
+/* Load Heebo from Google Fonts — bypasses next/font/google + Turbopack entirely */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1A1A2E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Heebo loaded via CSS @import above */
+  --font-sans:  'Heebo', sans-serif;
+  --font-serif: 'Heebo', sans-serif;
+
+  /* ── Brand palette ── */
+  --color-navy-deep:  #0B1D3A;
+  --color-navy-mid:   #122A52;
+  --color-gold:       #C9A84C;
+  --color-gold-light: #E8C97A;
+  --color-sand:       #F5EDD6;
+  --color-content:    #1A1A2E;
+  --color-muted:      #6B7280;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
