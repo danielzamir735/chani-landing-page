@@ -1,16 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import { ArrowLeft, CheckCircle2, Star, CalendarCheck } from "lucide-react";
 
 /* ─── Shared animation variants ──────────────────────────────────────── */
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 36 },
   visible: (delay: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut", delay },
+    transition: { duration: 0.7, ease: "easeOut" as const, delay },
   }),
 };
 
